@@ -32,7 +32,10 @@ public class BaseTests {
 
     @BeforeEach
     public void beforeMethod(TestInfo method) {
-        ExtentReportsUtils.addTest(method.getDisplayName(), method.getTestClass().get().getName());
+        String className = method.getTestClass().get().getName();
+        String tag = className.substring(className.lastIndexOf(".") + 1);
+        String testName = method.getDisplayName();
+        ExtentReportsUtils.addTest(testName, tag);
     }
     /*
     @BeforeEach

@@ -27,9 +27,8 @@ public class BasePage {
     protected JavascriptExecutor javaScriptExecutor = null;
 
     public BasePage() {
-        //PageFactory.initElements(new AppiumFieldDecorator(getDriver()),this);
         this.driver = getDriver();
-        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(120)), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(params.getTIMEOUT_DEFAULT())), this);
         wait = new WebDriverWait (driver, params.getTIMEOUT_DEFAULT());
     }
 
