@@ -1,4 +1,4 @@
-package appiumtemplatejavacucumber;
+package steps;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -12,6 +12,7 @@ class IsItFriday {
 }
 
 public class StepDefinitions {
+
   private String today;
   private String actualAnswer;
 

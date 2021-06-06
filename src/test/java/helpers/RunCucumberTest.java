@@ -1,4 +1,4 @@
-package appiumtemplatejavacucumber;
+package helpers;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
